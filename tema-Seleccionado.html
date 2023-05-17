@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.cdnfonts.com/css/antipasto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First WebSite</title>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index2.html">Inicio</a></li>
+            <li><a href="tema-Seleccionado.html">Tema Seleccionado</a></li>
+            <li><a href="mockup.html">Mockup</a></li>
+            <li><a href="acercaDe.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    <h1>Media Queries CSS</h1>
+    <p>
+        Una vez nos adentramos en el mundo del Responsive Design, nos damos cuenta en que hay situaciones en las que
+        determinados aspectos o componentes visuales deben aparecer con ciertas diferencias dependiendo del dispositivo
+        donde se están visualizando, ya que no todos los dispositivos tienen los mismos tamaños o características.
+    </p>
+    <h2>
+        Que son las media Queries?
+    </h2>
+    <p>
+        Existe un concepto denominado media queries, mediante el cuál podemos hacer excepciones para que unos
+        determinados estilos de diseño sólo se apliquen si se cumplen una serie de condiciones, generalmente
+        relacionadas con el dispositivo mediante el cuál se está viendo la página.
+    </p>
+    <h2>
+        La regla @media
+    </h2>
+    <p>
+        Las reglas media queries (también denominadas MQ a veces) son un tipo de reglas de CSS que permiten crear un
+        bloque de código que sólo se procesará en los dispositivos que cumplan los criterios especificados como
+        condición. La sintaxis de la regla @media es la siguiente:
+    </p>
+    <table class="center">
+        <tr>
+            <th>Regla</th>
+            <th>Descripcion</th>
+        </tr>
+        <tr>
+            <td>@media (< condición>)</td>
+            <td>Si se cumple la condición, se aplican los estilos de su interior.</td>
+        </tr>
+        <tr>
+            <td>@media not (< condición>)</td>
+            <td>Si no se cumple la condición, se aplican los estilos de su interior.</td>
+        </tr>
+    </table>
+    <p>
+        Básicamente, se trata de establecer una condición que se aplicará a la página actual, y en el caso de cumplirse,
+        se
+        aplicarán los estilos indicados en su interior. De no cumplirse, no se aplicarán. Si utilizamos la keyword not
+        antes
+        de la condición, se invierte la condición
+    </p>
+    <h2>
+        Condiciones multiples
+    </h2>
+    <p>
+        Si lo deseas, es posible establecer múltiples condiciones en las reglas @media. De esta forma, se pueden
+        conseguir situaciones mucho más específicas y flexibles. Ten mucho cuidado si aplicas el not en las condiciones,
+        no sea que niegues de forma incorrecta los casos deseados:
+    </p>
+    <h2>
+        Tipos de medios
+    </h2>
+    <p>
+        En algunas ocasiones, queremos indicar que las reglas @media sólo se pongan en funcionamiento en determinados
+        tipos de dispositivos. Son los llamados tipos de medios. Existen los siguientes:
+    </p>
+    <table class="center">
+        <tr>
+            <th>Tipo de Medio</th>
+            <th>Significado</th>
+        </tr>
+        <tr>
+            <td>all</td>
+            <td>Todos los dispositivos o medios. El que se utiliza por defecto.</td>
+        </tr>
+        <tr>
+            <td>screen</td>
+            <td>Monitores o pantallas de ordenador. Es el más común.</td>
+        </tr>
+        <tr>
+            <td>print</td>
+            <td>Documentos de medios impresos o pantallas de previsualización de impresión.</td>
+        </tr>
+        <tr>
+            <td>speech</td>
+            <td>Lectores de texto para invidentes (Antes aural, el cuál ya está obsoleto).</td>
+        </tr>
+    </table>
+    <h2>
+        Condiciones de Media Queries
+    </h2>
+    <p>
+        En los ejemplos anteriores hemos indicado condiciones, pero no hemos definido ninguna. Vamos a echar un vistazo
+        a que tipo de características podemos definir en las condiciones de los media queries. Podemos utilizar los
+        siguientes:
+    </p>
+    <table class="center">
+        <tr>
+            <th>Tipo de Caracteristica</th>
+            <th>Valores</th>
+            <th>Cuando se aplica?</th>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>SIZE</td>
+            <td>Si el dispositivo tiene el tamaño de ancho exactamente.</td>
+        </tr>
+        <tr>
+            <td>min-width</td>
+            <td>SIZE</td>
+            <td>Si el dispositivo tiene un tamaño de ancho mayor al indicado.</td>
+        </tr>
+        <tr>
+            <td>max-width</td>
+            <td>SIZE</td>
+            <td>Si el dispositivo tiene un tamaño de ancho menor al indicado.</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>SIZE</td>
+            <td>Si el dispositivo tiene el tamaño de alto exactamente.</td>
+        </tr>
+        <tr>
+            <td>min-height</td>
+            <td>SIZE</td>
+            <td>Si el dispositivo tiene un tamaño de alto mayor al indicado.</td>
+        </tr>
+        <tr>
+            <td>max-height</td>
+            <td>SIZE</td>
+            <td>Si el dispositivo tiene un tamaño de alto menor al indicado.</td>
+        </tr>
+        <tr>
+            <td>aspect-ratio</td>
+            <td>aspect-ratio</td>
+            <td>Si el dispositivo encaja con la proporción de aspecto indicada.</td>
+        </tr>
+        <tr>
+            <td>orientation</td>
+            <td>landscape | portrait</td>
+            <td>Si el dispositivo está en colocado en modo vertical o apaisado.</td>
+        </tr>
+    </table>
+    <h2>
+        Ejemplo basico
+    </h2>
+    <p>
+        Veamos un ejemplo clásico de media queries en el que definimos diferentes estilos dependiendo del dispositivo
+        que estamos utilizando. Observese que en el código existen 3 bloques @media donde se definen estilos CSS para
+        cada uno de esos tipos de dispositivos.
+        <br>
+        El código sería el siguiente:
+    </p>
+    <textarea rows="18" cols="80">
+        @media (max-width: 800px) {
+            .menu {
+              background: blue;
+            }
+          }
+          
+          @media (min-width: 800px) and (max-width: 1280px) {
+            .menu {
+              background: red;
+            }
+          }
+          
+          @media (min-width: 1280px) {
+            .menu {
+              background: green;
+            }
+          }
+    </textarea>
+    <p>
+        El ejemplo anterior muestra un elemento (con clase menu) con un color de fondo concreto, dependiendo del tipo de
+        medio con el que se visualice la página:
+    <ul>
+        <li class="li_items">
+            &squf; Azul para resoluciones menores a 800 píxeles de ancho (móviles).
+        </li>
+        <li class="li_items">
+            &squf; Rojo para resoluciones entre 800 píxeles y 1280 píxeles de ancho (tablets).
+        </li>
+        <li class="li_items">
+            &squf; Verde para resoluciones mayores a 1280 píxeles (desktop).
+        </li>
+    </ul>
+    </p>
+    <div class="divix">
+        <p>El número de bloques de reglas @media a utilizar depende del desarrollador web, ya que no hay una obligación
+            o
+            norma de utilizar un número concreto. Se pueden utilizar desde un sólo media query, hasta múltiples de ellos
+            a
+            lo largo de todo el documento CSS.
+        </p>
+    </div>
+    <div style="padding-bottom: 100px;">
+        <!-- #region -->
+    </div>
+    <footer>
+        <p>
+            <a href="acercaDe.html">Autor: Javier Gomez</a> |
+            <a href="jagomezvi@unadvirtual.edu.co">jagomezvi@unadvirtual.edu.co</a> |
+            <a>Fecha de Actualizacion: abril 22 de 2023</a>
+        </p>
+        <p>
+            Copyright 1997-2023 by Javier Gómez. All Rights Reserved.
+        </p>
+    </footer>
+</body>
+
+</html>
